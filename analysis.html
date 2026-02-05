@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interaction Analysis – Norman vs GOMS</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Interaction Analysis</h1>
+    <p>Norman (1988) vs. GOMS (1983): Enable Wi-Fi (iPhone 13 / Samsung S25)</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>Norman vs. GOMS Comparison Table</h2>
+      <p>Comparison of Norman’s Stages and GOMS Concepts Using Syringe Dose Setting</p>
+
+      <table border="1">
+        <caption>Comparison of Norman’s Action Cycle and GOMS Concepts</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Norman’s Stage</th>
+            <th scope="col">Real-World Example (Automatic Syringe Filling Machine)</th>
+            <th scope="col">GOMS Interpretation & Rationale (GOMS 1983 vs Norman 1988)</th>
+            <th scope="col">Alignment Analysis</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Goal ↔ GOAL (User Intention)</th>
+            <td>Nurse wants to set correct medicine dose (e.g., 1372 units).</td>
+            <td>
+              Goal: Set required dose value before injection.<br>
+              Top-level objective in GOMS.
+            </td>
+            <td>Perfect Match — Both models start with user intention to achieve system outcome.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Plan ↔ METHOD & Selection Rules</th>
+            <td>
+              Nurse decides how to enter dose value.<br>
+              Old Interface: Type full number using numeric keypad.<br>
+              Improved Interface: Adjust each digit using increment/decrement buttons.<br>
+              Nurse prefers safer method to reduce risk of error.
+            </td>
+            <td>
+              Method 1: Enter digits via keypad.<br>
+              Method 2: Adjust digits individually using + / – controls.<br>
+              Selection Rule: If high-risk medication → choose digit adjustment method.
+            </td>
+            <td>Conceptual Match — Norman calls it planning; GOMS models alternative methods and rule-based selection.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Specify (Forming action sequence & locating controls)</th>
+            <td>Nurse visually locates dose input interface and determines which digits must change.</td>
+            <td>Not explicitly modeled in classic GOMS. Often abstracted as mental preparation (KLM M operator).</td>
+            <td>Key Divergence — Norman emphasizes perception and cognition; GOMS abstracts this step.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Execute ↔ OPERATOR (Physical interaction)</th>
+            <td>
+              Nurse presses keypad digits or increment/decrement buttons.<br>
+              Example actions: Press button, move finger between controls.
+            </td>
+            <td>
+              Operators: Keystroke (K), Pointing (P), Mental preparation (M).<br>
+              Example KLM sequence: [M] Decide digit → [P] Move → [K] Press button.
+            </td>
+            <td>Direct Match — Both models explicitly describe physical user actions.</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Perceive / Interpret / Evaluate (Feedback Loop)</th>
+            <td>
+              Nurse checks system feedback:<br>
+              1. Perceive updated digits on display.<br>
+              2. Interpret whether displayed dose is correct.<br>
+              3. Evaluate whether machine is ready for injection.<br>
+              If wrong → repeat adjustment.
+            </td>
+            <td>Not modeled in classic GOMS. Assumes perfect perception and immediate success.</td>
+            <td>Fundamental Divergence — Norman focuses on closing the Gulf of Evaluation; GOMS focuses on task efficiency.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 HCI–CG Course</p>
+  </footer>
+
+</body>
+</html>
