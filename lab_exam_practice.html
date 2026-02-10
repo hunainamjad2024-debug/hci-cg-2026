@@ -20,6 +20,35 @@
       padding: 0 20px;
     }
 
+    /* Navigation */
+    nav {
+      margin-bottom: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+
+    nav a[aria-current="page"] {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     h1, h2, h3 {
       font-weight: bold;
       margin-top: 40px;
@@ -28,6 +57,7 @@
     h1 {
       font-size: 2.2em;
       text-align: center;
+      margin-top: 20px;
     }
 
     h2 {
@@ -56,8 +86,8 @@
     }
 
     th {
-      font-weight: bold;
       background-color: #f5f5f5;
+      font-weight: bold;
     }
 
     code {
@@ -81,6 +111,18 @@
 
 <body>
   <div class="container">
+
+    <!-- Navigation -->
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
+        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+        <li><a href="lab_exam_practice.html">Lab Exam Practice</a></li>
+      </ul>
+    </nav>
 
     <h1>Lab Exam Practice Questions</h1>
 
@@ -170,99 +212,3 @@
 &lt;/form&gt;
               </code>
             </td>
-          </tr>
-
-          <tr>
-            <td>Table missing thead and tbody</td>
-            <td>
-              <code>
-&lt;table&gt;
-  &lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;th&gt;Predicts&lt;/th&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;GOMS&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-              </code>
-            </td>
-            <td>Structured and accessible table</td>
-            <td>
-              <code>
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;Model&lt;/th&gt;
-      &lt;th scope="col"&gt;Predicts&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;GOMS&lt;/td&gt;
-      &lt;td&gt;Time&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-              </code>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section">
-      <h2>Part B: True / False</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Statement</th>
-            <th>Answer</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Every link inside &lt;ul&gt; must be placed inside an &lt;li&gt;.</td>
-            <td>True</td>
-          </tr>
-          <tr>
-            <td>A page may have multiple &lt;h1&gt; headings to make text larger.</td>
-            <td>False</td>
-          </tr>
-          <tr>
-            <td>aria-current="page" should be used on the active navigation item.</td>
-            <td>True</td>
-          </tr>
-          <tr>
-            <td>A form is accessible even if it has no &lt;label&gt; elements.</td>
-            <td>False</td>
-          </tr>
-          <tr>
-            <td>KLM predicts execution time for expert, error-free performance.</td>
-            <td>True</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section">
-      <h2>Part C: Short Answer</h2>
-
-      <h3>Difference Between Semantic and Generic Elements</h3>
-      <p>
-        Semantic elements like <code>&lt;nav&gt;</code> describe their meaning clearly,
-        while generic elements like <code>&lt;div&gt;</code> are used only for grouping
-        or styling.
-      </p>
-
-      <h3>Why KLM Does Not Model High-Level Planning and Interpretation</h3>
-      <p>
-        KLM predicts execution time for routine expert actions but does not model
-        high-level cognitive processes because they vary between users and are
-        difficult to measure.
-      </p>
-    </div>
-
-    <footer>
-      © 2026 Lab Practice
-    </footer>
-
-  </div>
-</body>
-</html>
