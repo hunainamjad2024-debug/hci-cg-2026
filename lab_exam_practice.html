@@ -2,213 +2,236 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lab Exam Practice Questions</title>
+  <title>Lab Exam Practice</title>
 
+  <!-- Minimal CSS: ONLY allowed properties -->
   <style>
     body {
       font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      color: #000;
       background-color: #ffffff;
-      color: #000;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    /* Navigation */
-    nav {
-      margin-bottom: 40px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 0;
-    }
-
-    nav a {
-      color: #000;
-      text-decoration: underline;
-      font-weight: normal;
-    }
-
-    nav a[aria-current="page"] {
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    h1, h2, h3 {
-      font-weight: bold;
-      margin-top: 40px;
     }
 
     h1 {
-      font-size: 2.2em;
-      text-align: center;
-      margin-top: 20px;
+      font-size: 32px;
     }
 
     h2 {
-      font-size: 1.6em;
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
+      font-size: 24px;
     }
 
     h3 {
-      font-size: 1.3em;
-      margin-top: 30px;
+      font-size: 20px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      font-size: 0.95em;
+    nav a {
+      color: #0000ee;
     }
 
-    th, td {
-      border: 1px solid #000;
-      padding: 10px;
-      vertical-align: top;
-      text-align: left;
-    }
-
-    th {
-      background-color: #f5f5f5;
-      font-weight: bold;
-    }
-
-    code {
-      font-family: "Courier New", monospace;
-      font-size: 0.9em;
-      white-space: pre-wrap;
-      display: block;
-    }
-
-    .section {
-      margin-top: 50px;
-    }
-
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 0.9em;
+    nav a[aria-current="page"] {
+      color: #000;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <!-- Navigation -->
-    <nav aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="analysis.html" aria-current="page">Interaction Analysis</a></li>
-        <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-        <li><a href="lab_exam_practice.html">Lab Exam Practice</a></li>
-      </ul>
-    </nav>
+  <!-- Navigation (semantic, list-based, no layout CSS) -->
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="lab_exam_practice.html" aria-current="page">Lab Exam Practice</a></li>
+    </ul>
+  </nav>
 
-    <h1>Lab Exam Practice Questions</h1>
+  <!-- Page heading (exactly ONE h1) -->
+  <h1>Lab Exam Practice Questions</h1>
 
-    <div class="section">
-      <h2>HTML Mistakes (Identify & Fix)</h2>
+  <section>
+    <h2>HTML Mistakes (Identify & Fix)</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>UI Element / Issue</th>
-            <th>Wrong HTML (with mistake)</th>
-            <th>Correct UI Element</th>
-            <th>Correct HTML</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Navigation wrapped in div instead of nav</td>
-            <td>
-              <code>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">UI Element / Issue</th>
+          <th scope="col">Wrong HTML (with mistake)</th>
+          <th scope="col">Correct UI Element</th>
+          <th scope="col">Correct HTML</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Navigation wrapped in div instead of nav</td>
+          <td>
+            <pre>
 &lt;div class="menu"&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
-              </code>
-            </td>
-            <td>Semantic navigation landmark</td>
-            <td>
-              <code>
+            </pre>
+          </td>
+          <td>Semantic navigation landmark</td>
+          <td>
+            <pre>
 &lt;nav aria-label="Main navigation"&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;
-              </code>
-            </td>
-          </tr>
+            </pre>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Image has meaningless alt text</td>
-            <td>
-              <code>
+        <tr>
+          <td>Image has meaningless alt text</td>
+          <td>
+            <pre>
 &lt;img src="syringe.png" alt="image"&gt;
-              </code>
-            </td>
-            <td>Accessible image description</td>
-            <td>
-              <code>
-&lt;img src="syringe.png" alt="Automatic syringe filling machine interface"&gt;
-              </code>
-            </td>
-          </tr>
+            </pre>
+          </td>
+          <td>Accessible image description</td>
+          <td>
+            <pre>
+&lt;img src="syringe.png"
+     alt="Automatic syringe filling machine interface"&gt;
+            </pre>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Using br tags for layout spacing</td>
-            <td>
-              <code>
+        <tr>
+          <td>Using br tags for layout spacing</td>
+          <td>
+            <pre>
 &lt;p&gt;Interaction Design&lt;/p&gt;
 &lt;br&gt;&lt;br&gt;
 &lt;p&gt;Assignment 1&lt;/p&gt;
-              </code>
-            </td>
-            <td>Proper content structure</td>
-            <td>
-              <code>
+            </pre>
+          </td>
+          <td>Proper content structure</td>
+          <td>
+            <pre>
 &lt;p&gt;Interaction Design&lt;/p&gt;
 &lt;p&gt;Assignment 1&lt;/p&gt;
-              </code>
-            </td>
-          </tr>
+            </pre>
+          </td>
+        </tr>
 
-          <tr>
-            <td>Button missing type inside form</td>
-            <td>
-              <code>
+        <tr>
+          <td>Button missing type inside form</td>
+          <td>
+            <pre>
 &lt;form&gt;
   &lt;button&gt;Reset&lt;/button&gt;
 &lt;/form&gt;
-              </code>
-            </td>
-            <td>Explicit button behavior</td>
-            <td>
-              <code>
+            </pre>
+          </td>
+          <td>Explicit button behavior</td>
+          <td>
+            <pre>
 &lt;form&gt;
   &lt;button type="button"&gt;Reset&lt;/button&gt;
 &lt;/form&gt;
-              </code>
-            </td>
+            </pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Table missing thead and tbody</td>
+          <td>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;th&gt;Predicts&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;GOMS&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+          </td>
+          <td>Structured and accessible table</td>
+          <td>
+            <pre>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Model&lt;/th&gt;
+      &lt;th scope="col"&gt;Predicts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;GOMS&lt;/td&gt;
+      &lt;td&gt;Time&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Part B: True / False</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Statement</th>
+          <th scope="col">Answer</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Every link inside &lt;ul&gt; must be placed inside an &lt;li&gt;.</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>A page may have multiple &lt;h1&gt; headings to make text larger.</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>aria-current="page" should be used on the active navigation item.</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>A form is accessible even if it has no &lt;label&gt; elements.</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>KLM predicts execution time for expert, error-free performance.</td>
+          <td>True</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Part C: Short Answer</h2>
+
+    <h3>Difference Between Semantic and Generic Elements</h3>
+    <p>
+      Semantic elements like &lt;nav&gt; clearly describe their meaning,
+      while generic elements like &lt;div&gt; are used only for grouping or styling.
+    </p>
+
+    <h3>Why KLM Does Not Model High-Level Planning and Interpretation</h3>
+    <p>
+      KLM predicts execution time for routine expert actions but does not model
+      high-level cognitive processes because they vary between users and are
+      difficult to measure.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Lab Practice</p>
+  </footer>
+
+</body>
+</html>
