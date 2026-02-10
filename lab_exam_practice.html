@@ -1,0 +1,171 @@
+<h1>Lab Exam Practice Questions</h1>
+<table>
+  <caption>HTML Mistakes (Identify & Fix)</caption>
+
+  <thead>
+    <tr>
+      <th scope="col">UI Element / Issue</th>
+      <th scope="col">Wrong HTML (with mistake)</th>
+      <th scope="col">Correct UI Element</th>
+      <th scope="col">Correct HTML</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Mistake 1 -->
+    <tr>
+      <td>Navigation wrapped in div instead of nav</td>
+      <td>
+        &lt;div class="menu"&gt;<br>
+        &nbsp;&nbsp;&lt;ul&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;/ul&gt;<br>
+        &lt;/div&gt;
+      </td>
+      <td>Semantic navigation landmark</td>
+      <td>
+        &lt;nav aria-label="Main navigation"&gt;<br>
+        &nbsp;&nbsp;&lt;ul&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+        &nbsp;&nbsp;&lt;/ul&gt;<br>
+        &lt;/nav&gt;
+      </td>
+    </tr>
+
+    <!-- Mistake 2 -->
+    <tr>
+      <td>Image has meaningless alt text</td>
+      <td>
+        &lt;img src="syringe.png" alt="image"&gt;
+      </td>
+      <td>Accessible image description</td>
+      <td>
+        &lt;img src="syringe.png" alt="Automatic syringe filling machine interface"&gt;
+      </td>
+    </tr>
+
+    <!-- Mistake 3 -->
+    <tr>
+      <td>Using br tags for layout spacing</td>
+      <td>
+        &lt;p&gt;Interaction Design&lt;/p&gt;<br>
+        &lt;br&gt;&lt;br&gt;<br>
+        &lt;p&gt;Assignment 1&lt;/p&gt;
+      </td>
+      <td>Proper content structure</td>
+      <td>
+        &lt;p&gt;Interaction Design&lt;/p&gt;<br>
+        &lt;p&gt;Assignment 1&lt;/p&gt;
+      </td>
+    </tr>
+
+    <!-- Mistake 4 -->
+    <tr>
+      <td>Button missing type inside form</td>
+      <td>
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;button&gt;Reset&lt;/button&gt;<br>
+        &lt;/form&gt;
+      </td>
+      <td>Explicit button behavior</td>
+      <td>
+        &lt;form&gt;<br>
+        &nbsp;&nbsp;&lt;button type="button"&gt;Reset&lt;/button&gt;<br>
+        &lt;/form&gt;
+      </td>
+    </tr>
+
+    <!-- Mistake 5 -->
+    <tr>
+      <td>Table missing thead and tbody</td>
+      <td>
+        &lt;table&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;Model&lt;/th&gt;&lt;th&gt;Predicts&lt;/th&gt;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;GOMS&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;<br>
+        &lt;/table&gt;
+      </td>
+      <td>Structured and accessible table</td>
+      <td>
+        &lt;table&gt;<br>
+        &nbsp;&nbsp;&lt;thead&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Model&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Predicts&lt;/th&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;/thead&gt;<br>
+        &nbsp;&nbsp;&lt;tbody&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;GOMS&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Time&lt;/td&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+        &nbsp;&nbsp;&lt;/tbody&gt;<br>
+        &lt;/table&gt;
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+<section>
+  <h2>Part B: True / False</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Statement</th>
+        <th scope="col">Answer</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Every link inside &lt;ul&gt; must be placed inside an &lt;li&gt;.</td>
+        <td>True</td>
+      </tr>
+
+      <tr>
+        <td>A page may have multiple &lt;h1&gt; headings to make text larger.</td>
+        <td>False</td>
+      </tr>
+
+      <tr>
+        <td>aria-current="page" should be used on the active navigation item.</td>
+        <td>True</td>
+      </tr>
+
+      <tr>
+        <td>A form is accessible even if it has no &lt;label&gt; elements.</td>
+        <td>False</td>
+      </tr>
+
+      <tr>
+        <td>KLM predicts execution time for expert, error-free performance.</td>
+        <td>True</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+<section>
+  <h2>Part C: Short Answer</h2>
+
+  <article>
+    <h3>Difference Between Semantic and Generic Elements</h3>
+    <p>
+      A semantic element such as <code>&lt;nav&gt;</code> clearly describes its meaning and purpose
+      to both the browser and assistive technologies, improving accessibility and structure.
+      A generic element such as <code>&lt;div&gt;</code> has no inherent meaning and is used only
+      for grouping content or styling.
+    </p>
+  </article>
+
+  <article>
+    <h3>Why KLM Does Not Model High-Level Planning and Interpretation</h3>
+    <p>
+      The Keystroke-Level Model (KLM) focuses on predicting the execution time of routine,
+      expert, and error-free physical actions. It does not model high-level planning,
+      perception, or interpretation because these cognitive processes are abstract and vary
+      between users, making them difficult to quantify precisely.
+    </p>
+  </article>
+</section>
